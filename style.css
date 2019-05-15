@@ -1,0 +1,27 @@
+.title {
+  color: #ddd;
+  background-color: #333;
+  text-align: center;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+}
+
+.container > div {
+  border: 1px solid #111;
+  padding: 1em;
+}
+
+.dom-button {
+  display: block;
+  margin: 0 auto;
+}
+
+#unhide-btn {
+  cursor: pointer;
+  display: block;
+  height: 8em;
+  margin: 0 auto;
+}
