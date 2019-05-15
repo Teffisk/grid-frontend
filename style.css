@@ -25,3 +25,91 @@
   height: 8em;
   margin: 0 auto;
 }
+/* ----------- Box 4 ------------- */
+#box4 {
+  position: relative;
+}
+
+#box4-top {
+  color: white;
+  position: absolute;
+  opacity: 0;
+  text-align: center;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  margin: 40px;
+  padding: 20px;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+#box4-bottom {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: #777;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+#box4:hover #box4-bottom {
+  opacity: 0.5;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+#box4:hover {
+  transition: all 0.4s ease-in-out 0s;
+}
+
+#box4:hover #box4-top {
+  background-color: #333;
+  opacity: 1;
+  transition: all 0.4s ease-in-out 0s;
+}
+
+/* ------------ Box 5 -------------- */
+#box5 {
+  overflow: hidden;
+  height: 8vw;
+}
+
+#box5:active {
+  position: absolute;
+  width: 60vw;
+  height: auto;
+  margin: 4vw 20vw;
+  background-color: #ddd;
+}
+/* --------------- Box6 Star Ratings -------------- */
+.star-rating {
+  direction: rtl;
+  cursor: pointer;
+}
+
+.star-rating li {
+  list-style: none;
+  color: #262628;
+  display: inline;
+  transition: color 0.3s ease-in-out;
+}
+
+.star-rating li:hover,
+.star-rating li:hover ~ .star {
+  color: #efd439;
+}
+
+/* ------------ Box7 Nested Grid -------------- */
+#box7 {
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+#box7 > div {
+  background-color: #1247ce;
+  text-align: center;
+  padding: 1em;
+}

@@ -1,19 +1,27 @@
 document.addEventListener("DOMContentLoaded", e => {
-  e.preventDefault();
-  console.log("Hello World!");
-
-  // change the background of box 1
+  /////////////// Box1 Change Background Color ///////////////
   let box1 = true;
   let box1Color;
+  let randomColor;
+  const colorize = color => {
+    color =
+      "#" +
+      Math.random()
+        .toString(16)
+        .slice(2, 8);
+    return color;
+  };
+
   document.querySelector("#background-btn").addEventListener("click", e => {
     e.preventDefault();
+
     box1
-      ? ((box1 = false), (box1Color = "red"))
+      ? ((box1 = false), (box1Color = colorize(randomColor)))
       : ((box1 = true), (box1Color = "white"));
     document.querySelector("#box1").style.backgroundColor = box1Color;
   });
 
-  // change box2 text color
+  //////////// Box2 Change Text Color ////////////
   let box2 = true;
   let box2Color;
   document.querySelector("#text-color").addEventListener("click", e => {
@@ -25,6 +33,7 @@ document.addEventListener("DOMContentLoaded", e => {
     console.log(box2, box2Color);
   });
 
+  ////////// Box3 Hide Effect ////////
   // create the new unhide btn to be created
   const newBtn = document.createElement("img");
   // add attributes to the newly created button
@@ -56,4 +65,19 @@ document.addEventListener("DOMContentLoaded", e => {
       newBtn.remove();
     });
   });
+
+  //////// Box5 Enlarge Effect /////////////
+  //   const popUp = document.createElement("div");
+  //   popUp.setAttribute("id", "#popUp");
+  //   const hidePopUp = document.createElement("button");
+  //   hidePopUp.setAttribute("id", "hide-popup-btn");
+  //   hidePopUp.setAttribute("value", "Hide Box");
+  //   document.querySelector("#enlarge-btn").addEventListener("click", e => {
+  //     e.preventDefault();
+  //     container.appendChild(popUp);
+  //     popUp.appendChild(hidePopUp);
+  //     hidePopUp.addEventListener("click", e => {
+
+  //     })
+  //   });
 });
