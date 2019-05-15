@@ -67,17 +67,16 @@ document.addEventListener("DOMContentLoaded", e => {
   });
 
   //////// Box5 Enlarge Effect /////////////
-  //   const popUp = document.createElement("div");
-  //   popUp.setAttribute("id", "#popUp");
-  //   const hidePopUp = document.createElement("button");
-  //   hidePopUp.setAttribute("id", "hide-popup-btn");
-  //   hidePopUp.setAttribute("value", "Hide Box");
-  //   document.querySelector("#enlarge-btn").addEventListener("click", e => {
-  //     e.preventDefault();
-  //     container.appendChild(popUp);
-  //     popUp.appendChild(hidePopUp);
-  //     hidePopUp.addEventListener("click", e => {
+  const box5 = document.querySelector("#box5");
+  const box6 = document.querySelector("#box6");
+  const tempDiv = document.createElement("div");
 
-  //     })
-  //   });
+  tempDiv.setAttribute("id", "tempDiv");
+
+  box5.addEventListener("mousedown", () => {
+    container.insertBefore(tempDiv, box6);
+  });
+  box5.addEventListener("mouseup", () => {
+    container.removeChild(tempDiv);
+  });
 });
