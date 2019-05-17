@@ -109,24 +109,26 @@ body {
 
 #box5:active {
   position: absolute;
-  width: 60vw;
+  /* width: 60vw; */
   height: auto;
   margin: 4vw 20vw;
   background-color: #ddd;
 }
 /* --------------- Box6 Star Ratings -------------- */
+#box6 {
+  text-align: center;
+}
+
 .star-rating {
   direction: rtl;
   cursor: pointer;
-  /* width: 196px; */
-  margin: 10px auto;
 }
 
 .star-rating li {
   list-style: none;
   color: #262628;
   display: inline;
-  transition: color 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 .star-rating li:hover,
@@ -152,5 +154,5 @@ body {
 #box7 > div:hover {
   background-color: #c1c3c9;
   color: #1247ce;
-  transition: 0.2s ease-in-out;
+  transition: color 0.2s ease-in-out;
 }
