@@ -1,11 +1,7 @@
 body {
   font-family: "Rubik", sans-serif;
   margin: 0;
-  box-sizing: border-box;
-}
-
-* {
-  box-sizing: inherit;
+  position: absolute;
 }
 
 .content {
@@ -16,7 +12,6 @@ body {
   color: #ddd;
   background-color: #333;
   text-align: center;
-  width: 100vw;
 }
 
 .title {
@@ -33,14 +28,14 @@ body {
   grid-gap: 1em;
 }
 /* -------------- Mediums sized screens ------------- */
-@media only screen and (max-width: 950px) {
+@media screen and (max-width: 950px) {
   .container {
     grid-template-columns: repeat(2, 1fr);
   }
 }
 
 /* -------------- Small sized screens -------------- */
-@media only screen and (max-width: 700px) {
+@media screen and (max-width: 700px) {
   .container {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -123,7 +118,7 @@ body {
 .star-rating {
   direction: rtl;
   cursor: pointer;
-  width: 196px;
+  /* width: 196px; */
   margin: 10px auto;
 }
 
