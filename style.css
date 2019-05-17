@@ -1,14 +1,17 @@
-html {
-  overflow-y: scroll;
-  height: 100%;
-  margin: 0px auto;
-  padding: 0;
-}
-
 body {
   font-family: "Rubik", sans-serif;
   margin: 0;
+  box-sizing: border-box;
 }
+
+* {
+  box-sizing: inherit;
+}
+
+.content {
+  margin: 10px;
+}
+
 .title-container {
   color: #ddd;
   background-color: #333;
@@ -28,7 +31,6 @@ body {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 1em;
-  margin: 0 2em;
 }
 /* -------------- Mediums sized screens ------------- */
 @media only screen and (max-width: 950px) {
