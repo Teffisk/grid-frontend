@@ -80,3 +80,21 @@ document.addEventListener("DOMContentLoaded", e => {
     container.removeChild(tempDiv);
   });
 });
+
+///////////////// Box 8 Dropdown //////////////
+const myList = ["Cannondale", "Trek", "Specialized", "Giant"];
+const box8 = document.querySelector("#box8");
+const dropdown = document.querySelector("#dropdown-form");
+
+myList.forEach(item => {
+  let brand = document.createElement("option");
+  brand.value = item;
+  brand.textContent = item;
+  dropdown.appendChild(brand);
+});
+
+dropdown.addEventListener("change", e => {
+  const val = e.target.value;
+  const result = document.querySelector("#box8-result");
+  result.textContent = val;
+});
